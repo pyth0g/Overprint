@@ -19,7 +19,7 @@ class OverPrint:
         print(f'{csi_up}{values[0]}{csi_clr}')
         for r in range(1, len(values)): print(f'{values[r]}{csi_clr}')
 
-def print(*values: object,sep: str = " ",nl_sep: str = "\n") -> None:
+def pprint(*values: object,sep: str = " ",nl_sep: str = "\n") -> None:
     last_str = ""
     for value in values:
         if len(values) > 1:

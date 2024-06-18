@@ -3,8 +3,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "overprint"
-version = "1.0.0"
+name = "printover"
+version = "1.0.1"
 authors = [
   { name="pyth0g", email="" },
 ]
@@ -14,9 +14,9 @@ requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
-    "Operating System :: Windows",
+    "Operating System :: OS Independent",
 ]
 
 [project.urls]
-Homepage = "https://github.com/pypa/sampleproject"
-Issues = "https://github.com/pypa/sampleproject/issues"
+Homepage = "https://github.com/pyth0g/Overprint"
+Issues = "https://github.com/pyth0g/Overprint/issues"
