@@ -19,7 +19,7 @@ class OverPrint:
         print(f'{csi_up}{values[0]}{csi_clr}')
         for r in range(1, len(values)): print(f'{values[r]}{csi_clr}')
 
-def pprint(*values: object,sep: str = " ",nl_sep: str = "\n") -> None:
+def pprint(*values: object, sep: str = " ", nl_sep: str = "\n") -> None:
     last_str = ""
     for value in values:
         if len(values) > 1:
@@ -27,3 +27,17 @@ def pprint(*values: object,sep: str = " ",nl_sep: str = "\n") -> None:
             OverPrint._csi(last_str.split(nl_sep))
         else:
             OverPrint._csi(str(value).split(nl_sep))
+
+def nprint(*values: object):
+    lines = [arg.split("\n") for arg in values]
+    max_lines = max(len(line) for line in lines)
+
+    for line in lines:
+        while len(line) < max_lines:
+            line.append("")
+
+    display_lines = ["".join(parts) for parts in zip(*lines)]
+        
+    display = "\n".join(display_lines)
+        
+    return display
