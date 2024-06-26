@@ -1,3 +1,3 @@
-from .overprint import pprint
+from .overprint import pprint, nprint
 
-__all__ = ["pprint"]
+__all__ = ["pprint", "nprint"]

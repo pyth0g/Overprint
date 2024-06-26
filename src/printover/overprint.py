@@ -28,7 +28,7 @@ def pprint(*values: object, sep: str = " ", nl_sep: str = "\n") -> None:
         else:
             OverPrint._csi(str(value).split(nl_sep))
 
-def nprint(*values: object):
+def nprint(*values: object) -> None:
     lines = [arg.split("\n") for arg in values]
     max_lines = max(len(line) for line in lines)
 
@@ -40,4 +40,4 @@ def nprint(*values: object):
         
     display = "\n".join(display_lines)
         
-    return display
+    print(display)
